@@ -1,24 +1,29 @@
 # RAG Translation Backend
 
-A simple Python backend for the Translated Junior ML Engineer test.
+A Python backend developed for the Translated Junior ML Engineer technical test.
 
-## What it does
+The application exposes a REST API that stores translation pairs, retrieves the most relevant examples for a translation request, builds a Retrieval-Augmented Generation (RAG) prompt, and provides an advanced stammering detection endpoint.
 
-- stores translation pairs in SQLite
-- retrieves up to 4 similar examples with TF-IDF + cosine similarity
-- builds a translation prompt for an LLM
-- detects translation stammering with a local heuristic algorithm
-- supports reverse-direction retrieval by reusing stored pairs in the opposite direction
+## Features
 
-## Tech choices
+- Store translation pairs in a local SQLite database
+- Retrieve up to 4 similar examples using TF-IDF + cosine similarity
+- Build a translation prompt enriched with retrieved examples
+- Detect translation stammering using a local heuristic algorithm
+- Support reverse-direction retrieval by reusing stored pairs in the opposite direction
+- Run locally or inside a Docker container
+
+## Tech Stack
 
 - **FastAPI** for the REST API
 - **SQLite** for persistence
 - **scikit-learn** for similarity search
+- **Uvicorn** as the ASGI server
+- **Docker** for containerization
 
-This keeps the project small, easy to explain, and easy to run.
+The implementation is intentionally simple, modular, and easy to run locally.
 
-## Project structure
+## Project Structure
 
 ```text
 app/
@@ -30,131 +35,101 @@ app/
   prompt_builder.py
   stammering.py
   services.py
-outoputs
+outputs/
 requirements.txt
 Dockerfile
 README.md
+client.py
+translation_pairs.jsonl
+translation_requests.jsonl
+stammering_tests.jsonl
 ```
+
+## Requirements
+
+- Python 3.11+ recommended
+
 
 ## Setup
 
-```bash
-python -m venv .venv
-source .venv/bin/activate  # Linux/macOS
-# .venv\Scripts\activate   # Windows
-pip install -r requirements.txt
-```
+Create and activate a virtual environment, then install dependencies.
 
-## Run the server
+## Run the Application Locally
+
+Start the API server with:
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
-The API will be available at:
+The application will be available at:
 
 - `http://127.0.0.1:8000`
-- Swagger docs: `http://127.0.0.1:8000/docs`
+- Swagger UI: `http://127.0.0.1:8000/docs`
 
-## Endpoints
+## Run with Docker
 
-### POST /pairs
+Docker support is included as an additional score booster.
 
-Request body:
-
-```json
-{
-  "source_language": "en",
-  "target_language": "it",
-  "sentence": "Good morning!",
-  "translation": "Buongiorno!"
-}
-```
-
-Response:
-
-```json
-{
-  "status": "ok"
-}
-```
-
-### GET /prompt
-
-Example:
-
-```bash
-curl "http://127.0.0.1:8000/prompt?source_language=en&target_language=it&query_sentence=Good%20night"
-```
-
-### GET /stammering
-
-Example:
-
-```bash
-curl "http://127.0.0.1:8000/stammering?source_sentence=ciao%20ciao&translated_sentence=bye%20bye%20bye%20bye%20bye%20bye%20bye"
-```
-
-## How retrieval works
-
-For a given request:
-
-1. all candidate pairs matching the requested direction are loaded from SQLite
-2. pairs in the reverse direction are also reused by swapping source and target texts
-3. TF-IDF vectors are computed on the candidate source-side sentences
-4. cosine similarity is used to rank candidates
-5. the top 4 pairs are inserted into the generated prompt
-
-The chosen vectorizer uses character n-grams (`char_wb`, 3 to 5). This works well for short sentences and is robust enough for small datasets without adding too much complexity.
-
-## How stammering detection works
-
-The local algorithm flags suspicious cases such as:
-
-- repeated consecutive words in the translated sentence
-- repeated consecutive n-grams such as `is really the` repeated multiple times
-- translations much longer than the source for short inputs
-- extreme character elongations not present in the source
-
-It also avoids common false positives like:
-
-- punctuation repetition (`??`)
-- natural emphasis (`sooo`)
-- source-side repetition that is intentional
-- short repeated expressions like `bye bye`
-
-## Running with the provided client
-
-The provided `client.py` expects the server on `http://localhost:8000`.
-
-Suggested workflow:
-
-1. start the API with `uvicorn app.main:app --reload`
-2. copy `client.py`, `translation_pairs.jsonl`, `translation_requests.jsonl`, and `stammering_tests.jsonl` into the project root
-3. run `python client.py`
-4. choose:
-   - `1` to populate the database
-   - `2` to request prompts
-   - `3` to test stammering detection
-
-## Docker
-
-Build:
+### Build the image
 
 ```bash
 docker build -t rag-translation-backend .
 ```
 
-Run:
+### Run the container
 
 ```bash
 docker run -p 8000:8000 rag-translation-backend
 ```
 
-## Possible next improvements
+The API will then be available at:
 
-- deduplicate identical translation pairs
-- persist a precomputed vector index for larger datasets
-- add tests with `pytest`
-- add logging and structured error handling
-- add a `/pairs/bulk` endpoint for faster ingestion
+- `http://localhost:8000`
+- Swagger UI: `http://localhost:8000/docs`
+
+## Captured Outputs
+
+The `outputs/` folder contains the captured outputs produced by running the different steps of `client.py`, as requested in the submission instructions.
+
+It includes the outputs for:
+
+- database population
+- prompt generation requests
+- stammering detection tests
+
+This allows the evaluator to inspect the application behavior without having to reproduce every step manually.
+
+## Retrieval Strategy
+
+For each translation request:
+
+1. candidate translation pairs are loaded from SQLite
+2. both direct and reverse-direction pairs can be used
+3. TF-IDF vectors are computed on the source-side sentences
+4. cosine similarity is used to rank the candidates
+5. the top 4 most relevant examples are added to the generated prompt
+
+This approach is lightweight, effective for a small dataset, and easy to explain.
+
+## Stammering Detection
+
+The advanced endpoint is implemented locally without relying on external stammering detection systems.
+
+The heuristic detects suspicious patterns such as:
+
+- repeated consecutive words
+- repeated consecutive n-grams
+- abnormally long translated sequences compared to the source
+- excessive character elongations not justified by the source sentence
+
+The goal is to keep the solution simple, deterministic, and easy to maintain.
+
+## Design Notes
+
+A few implementation choices were made to keep the project practical and clear:
+
+- **SQLite** was chosen because it is lightweight and sufficient for the scope of the task
+- **TF-IDF + cosine similarity** provides a simple and reliable baseline for retrieving similar translation pairs
+- **FastAPI** makes the API easy to develop, test, and document
+- **services.py** was introduced to keep the orchestration logic separated from the endpoint layer
