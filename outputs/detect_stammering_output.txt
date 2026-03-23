@@ -1,0 +1,30 @@
+Select an option:
+1 - Populate Database
+2 - Request Prompts
+3 - Detect Stammering
+4 - Exit
+Enter choice (1-4): 3
+
+Line 1: Response -> No (Expected: No)
+
+Line 2: Response -> No (Expected: No)
+
+Line 3: Response -> Yes (Expected: Yes)
+
+Line 4: Response -> No (Expected: No)
+
+Line 5: Response -> No (Expected: No)
+
+Line 6: Response -> No (Expected: No)
+
+Line 7: Response -> No (Expected: No)
+
+Line 8: Response -> No (Expected: No)
+
+Line 9: Response -> No (Expected: No)
+
+Line 10: Response -> Yes (Expected: Yes)
+
+Line 11: Response -> Yes (Expected: Yes)
+
+Line 12: Response -> Yes (Expected: Yes)

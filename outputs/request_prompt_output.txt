@@ -1,0 +1,348 @@
+Select an option:
+1 - Populate Database
+2 - Request Prompts
+3 - Detect Stammering
+4 - Exit
+Enter choice (1-4): 2
+
+Line 1: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: Good morning!
+   it: Buongiorno!
+2. en: Good evening!
+   it: Buonasera!
+3. en: I love Italian food.
+   it: Amo il cibo italiano.
+4. en: Do you speak English?
+   it: Parli inglese?
+
+Translate this sentence:
+en: Good night
+it:
+
+Line 2: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: Good evening!
+   it: Buonasera!
+2. en: Good morning!
+   it: Buongiorno!
+3. en: I love Italian food.
+   it: Amo il cibo italiano.
+4. en: Do you speak English?
+   it: Parli inglese?
+
+Translate this sentence:
+en: Good evening!
+it:
+
+Line 3: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: How's the weather?
+   it: Com'è il tempo?
+2. en: How's the weather today?
+   it: Com'è il tempo oggi?
+3. en: See you tomorrow.
+   it: Ci vediamo domani.
+4. en: What is the time?
+   it: Che ore sono?
+
+Translate this sentence:
+en: How's the weather tomorrow?
+it:
+
+Line 4: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: How's the weather today?
+   it: Com'è il tempo oggi?
+2. en: How's the weather?
+   it: Com'è il tempo?
+3. en: What's your name?
+   it: Come ti chiami?
+4. en: Hello, how are you?
+   it: Ciao, come stai?
+
+Translate this sentence:
+en: How's your day?
+it:
+
+Line 5: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: See you later.
+   it: Ci vediamo dopo.
+2. en: See you soon.
+   it: A presto.
+3. en: See you tomorrow.
+   it: Ci vediamo domani.
+4. en: Where are you from?
+   it: Di dove sei?
+
+Translate this sentence:
+en: See you later, my friend.
+it:
+
+Line 6: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: What's your name?
+   it: Come ti chiami?
+2. en: What is the time?
+   it: Che ore sono?
+3. en: What time is it?
+   it: Che ore sono?
+4. en: How's the weather?
+   it: Com'è il tempo?
+
+Translate this sentence:
+en: What's my name?
+it:
+
+Line 7: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: What's your name?
+   it: Come ti chiami?
+2. en: What is the time?
+   it: Che ore sono?
+3. en: What time is it?
+   it: Che ore sono?
+4. en: Do you speak Italian?
+   it: Parli italiano?
+
+Translate this sentence:
+en: What's your hometown?
+it:
+
+Line 8: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: Where is the station?
+   it: Dov'è la stazione?
+2. en: Where is the nearest station?
+   it: Dov'è la stazione più vicina?
+3. en: Where are you from?
+   it: Di dove sei?
+4. en: What is the time?
+   it: Che ore sono?
+
+Translate this sentence:
+en: Where is the bus stop?
+it:
+
+Line 9: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: I love Italian food.
+   it: Amo il cibo italiano.
+2. en: I love pizza.
+   it: Amo la pizza.
+3. en: Do you speak Italian?
+   it: Parli italiano?
+4. en: Good morning!
+   it: Buongiorno!
+
+Translate this sentence:
+en: I love pizza and I love italian food in general.
+it:
+
+Line 10: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: I love pizza.
+   it: Amo la pizza.
+2. en: I love Italian food.
+   it: Amo il cibo italiano.
+3. en: Do you speak English?
+   it: Parli inglese?
+4. en: Do you speak Italian?
+   it: Parli italiano?
+
+Translate this sentence:
+en: I love music.
+it:
+
+Line 11: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: Do you speak Italian?
+   it: Parli italiano?
+2. en: I love Italian food.
+   it: Amo il cibo italiano.
+3. en: Do you speak English?
+   it: Parli inglese?
+4. en: See you soon.
+   it: A presto.
+
+Translate this sentence:
+en: Do you understand Italian?
+it:
+
+Line 12: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: Do you speak Italian?
+   it: Parli italiano?
+2. en: Do you speak English?
+   it: Parli inglese?
+3. en: I love Italian food.
+   it: Amo il cibo italiano.
+4. en: See you soon.
+   it: A presto.
+
+Translate this sentence:
+en: Do you speak German or Italian?
+it:
+
+Line 13: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: What is the time?
+   it: Che ore sono?
+2. en: What time is it?
+   it: Che ore sono?
+3. en: What's your name?
+   it: Come ti chiami?
+4. en: Where is the station?
+   it: Dov'è la stazione?
+
+Translate this sentence:
+en: What time does the train leave?
+it:
+
+Line 14: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: I'm hungry.
+   it: Ho fame.
+2. en: I'm thirsty.
+   it: Ho sete.
+3. en: See you tomorrow.
+   it: Ci vediamo domani.
+4. en: Good morning!
+   it: Buongiorno!
+
+Translate this sentence:
+en: I'm feeling hungry now.
+it:
+
+Line 15: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: Where is the nearest station?
+   it: Dov'è la stazione più vicina?
+2. en: Where is the station?
+   it: Dov'è la stazione?
+3. en: Where are you from?
+   it: Di dove sei?
+4. en: What is the time?
+   it: Che ore sono?
+
+Translate this sentence:
+en: Is there a library nearby?
+it:
+
+Line 16: Received Translation Prompt.
+You are a professional translator. Translate from en to it.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. en: Hello, how are you?
+   it: Ciao, come stai?
+2. en: What is the time?
+   it: Che ore sono?
+3. en: How's the weather?
+   it: Com'è il tempo?
+4. en: Where is the station?
+   it: Dov'è la stazione?
+
+Translate this sentence:
+en: Can you help me find the park?
+it:
+
+Line 17: Received Translation Prompt.
+You are a professional translator. Translate from it to en.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. it: Che ore sono?
+   en: What is the time?
+2. it: Che ore sono?
+   en: What time is it?
+3. it: Parli italiano?
+   en: Do you speak Italian?
+4. it: Come ti chiami?
+   en: What's your name?
+
+Translate this sentence:
+it: Che ore sono?
+en:
+
+Line 18: Received Translation Prompt.
+You are a professional translator. Translate from it to en.
+Use the examples as style and terminology guidance when relevant.
+Return only the translated sentence.
+
+Retrieved translation examples:
+1. it: Ci vediamo dopo.
+   en: See you later.
+2. it: Ci vediamo domani.
+   en: See you tomorrow.
+3. it: Amo il cibo italiano.
+   en: I love Italian food.
+4. it: Amo la pizza.
+   en: I love pizza.
+
+Translate this sentence:
+it: Ci vediamo
+en:

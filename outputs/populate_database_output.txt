@@ -1,0 +1,28 @@
+(.venv) emilio@emilio-Prestige-14Evo-A12M:~/PycharmProjects/RAGdatabase$ python client.py
+
+Select an option:
+1 - Populate Database
+2 - Request Prompts
+3 - Detect Stammering
+4 - Exit
+Enter choice (1-4): 1
+Line 1: Added translation pair.
+Line 2: Added translation pair.
+Line 3: Added translation pair.
+Line 4: Added translation pair.
+Line 5: Added translation pair.
+Line 6: Added translation pair.
+Line 7: Added translation pair.
+Line 8: Added translation pair.
+Line 9: Added translation pair.
+Line 10: Added translation pair.
+Line 11: Added translation pair.
+Line 12: Added translation pair.
+Line 13: Added translation pair.
+Line 14: Added translation pair.
+Line 15: Added translation pair.
+Line 16: Added translation pair.
+Line 17: Added translation pair.
+Line 18: Added translation pair.
+Line 19: Added translation pair.
+Line 20: Added translation pair.
