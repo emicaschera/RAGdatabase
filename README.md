@@ -29,6 +29,8 @@ app/
   retrieval.py
   prompt_builder.py
   stammering.py
+  services.py
+outoputs
 requirements.txt
 Dockerfile
 README.md
